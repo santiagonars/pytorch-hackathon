@@ -12,7 +12,7 @@ General information on entire project
 
 #### Use Case Diagram
 
-![use case diagram](UML-diagrams/UseCaseDiagram-PytorchHackaton-Jul20_20.jpg)
+![use case diagram](UML-Diagrams/UseCaseDiagram-PytorchHackaton-Jul20_20.jpg)
 
 #### Cross-Function / Swim Lane Diagram
 
