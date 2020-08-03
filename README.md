@@ -1,6 +1,5 @@
 # pytorch-hackathon
-General information on entire project
-
+General Project Information:
 ---------------------------------------------------------------------------------------
 ## PyTorch Hackathon Summer 2020 Project
 
