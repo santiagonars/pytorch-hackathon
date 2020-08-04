@@ -12,8 +12,8 @@ General Project Information:
 
 #### Use Case Diagram (VERSION 1)
 
-![use case diagram](UML-Diagrams/UseCaseDiagram-PytorchHackaton-Jul20_20.jpg)
+![use case diagram](architecture/UML-Diagrams/UseCaseDiagram-PytorchHackaton-Jul20_20.jpg)
 
 #### Cross-Function / Swim Lane Diagram (VERSION 1)
 
-![cross-function / swim lane diagram](UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
+![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
