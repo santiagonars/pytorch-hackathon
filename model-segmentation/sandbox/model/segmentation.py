@@ -1,6 +1,6 @@
 import torch, torchvision
-# print("Torch Version:", torch.__version__)
-# print("CUDA available:", torch.cuda.is_available())
+print("Torch Version:", torch.__version__)
+print("CUDA available:", torch.cuda.is_available())
 # import detectron2 (and logger)
 import detectron2
 # from detectron2.utils.logger import setup_logger
@@ -46,6 +46,7 @@ class SegmentationModel():
         return predictor
 
     def getPrediction(self, predictor, image):
+        # run model
         outputs = predictor(image)
         return outputs
 
