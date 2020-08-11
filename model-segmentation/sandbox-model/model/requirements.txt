@@ -1,0 +1,6 @@
+# Requires torch, torchvision
+# Requires detectron2 
+numpy
+opencv-python
+requests
+
