@@ -1,0 +1,9 @@
+Flask==1.1.1
+cython==0.29.21
+numpy==1.16.1
+opencv-python==4.3.0.36
+requests==2.21.0
+
+# After installing the packages above, install in respective order(Check correct version for system is it installed on):
+# 1.)  torch, torchvision
+# 2.)  detectron2
