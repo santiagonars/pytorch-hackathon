@@ -5,35 +5,31 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
 import psycopg2
-# from psycopg2 import sql
+
 
 Base = declarative_base()
 
-# ---------WIll NEED this below to load NP_ARRAY (masks) using PICKLE:----------
-# https://stackoverflow.com/questions/60278766/best-way-to-insert-python-numpy-array-into-postgresql-database
-# https://docs.sqlalchemy.org/en/13/core/type_basics.html#sqlalchemy.types.PickleType
 
 class Jobs(Base):
     __tablename__ = 'jobs'
     
     id = Column(Integer, primary_key=True)
-    imageurl = Column(String(100), nullable=False)
-
+    image_url = Column(String(200), nullable=False)
     labels_things = Column(ARRAY(String))
     labels_stuff = Column(ARRAY(String))
     mask_labels = Column(ARRAY(String))
-    masks_nparr = Column(LargeBinary)  # BYTEA datatype in database
-
-    status = Column(String(8), nullable=False)
-
+    masks_nparr = Column(LargeBinary)  # BYTEA datatype in database; use pickle to load and dump from np array to binary
+    result_image_url = Column(String(200))
+    status = Column(String(20), nullable=False)
     created_at = Column(TIMESTAMP, nullable=False)
     updated_at = Column(TIMESTAMP, nullable=False)
 
+    def __repr__(self):
+        return '<Jobs: {0}:\n -> status:{1}; updated_at:{2}>'.format(self.image_url,
+                                                                    self.status,
+                                                                    self.updated_at)
 
 
-# engine = create_engine('postgresql://postgres:root@{}:5432/pyvinci?sslmode=disable'.format('172.17.0.2'))
-
-# Initial attempt:
 engine = create_engine('postgres+psycopg2://postgres:root@localhost:5432/pyvinci')
 
 Base.metadata.create_all(engine)

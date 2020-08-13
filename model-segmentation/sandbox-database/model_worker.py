@@ -2,14 +2,16 @@
 # from model.segmentation import SegmentationModel
 # from model.segmentation import ImagePreProcessing
 
-# import psycopg2
-# from psycopg2 import sql
+
 # import pickle
 
 
 def test_sqlAlchemy():
     
     pass
+
+
+
 
 
 """ import datetime
