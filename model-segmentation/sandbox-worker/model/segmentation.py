@@ -68,7 +68,7 @@ class SegmentationModel():
                 labels_things.append(self.thing_classes[classID[i][0]])
             else:
                 labels_stuff.append(self.stuff_classes[classID[i][0]])
-        print("prediction rendered-PanopticSeg")
+        print("rendered PanopticSeg")
         return (labels_things, labels_stuff)
 
     def getMasks_InstanceSeg(self, modelPrediction, labels=False):
@@ -81,7 +81,7 @@ class SegmentationModel():
             for i in range(len(maskClassIDs)):
                 # print(thing_classes[maskClassID[i]])
                 maskLabels.append(self.thing_classes[maskClassIDs[i]])
-            print("prediction rendered-InstanceSeg")
+            print("rendered InstanceSeg")
             return (masks, maskLabels)
         return masks
 
