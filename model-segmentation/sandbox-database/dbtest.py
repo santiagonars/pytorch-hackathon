@@ -14,14 +14,3 @@ DBSession = sessionmaker(bind=engine)
 # session.commit() => use to make any changes in the database
 # session.rollback() => use to revert all changes back to the the last commit
 session = DBSession()
-
-
-
-
-
-
-
-
-# ---------WIll NEED this below to load NP_ARRAY (masks) using PICKLE:----------
-# https://stackoverflow.com/questions/60278766/best-way-to-insert-python-numpy-array-into-postgresql-database
-# https://docs.sqlalchemy.org/en/13/core/type_basics.html#sqlalchemy.types.PickleType

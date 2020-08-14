@@ -100,7 +100,7 @@ class ImagePreProcessing():
             image_response = requests.get(imageUrl ,timeout=15)
             # raise_for_status will throw an exception if an HTTP error
             image_response.raise_for_status
-            print(image_response)
+            print('image received: {}'.format(image_response))
             # get image as numpy array
             image_NumpyArray = np.frombuffer(image_response.content, np.uint8)
             image = cv2.imdecode(image_NumpyArray, cv2.IMREAD_COLOR)

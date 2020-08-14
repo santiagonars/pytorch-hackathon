@@ -20,7 +20,7 @@ class Jobs(Base):
     mask_labels = Column(ARRAY(String))
     masks_nparr = Column(LargeBinary)  # BYTEA datatype in database; use pickle to load and dump from np array to binary
     result_image_url = Column(String(200))
-    status = Column(String(20), nullable=False)
+    status = Column(String(15), nullable=False)
     created_at = Column(TIMESTAMP, nullable=False)
     updated_at = Column(TIMESTAMP, nullable=False)
 

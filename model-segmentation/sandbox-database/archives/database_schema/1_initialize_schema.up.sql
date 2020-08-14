@@ -14,7 +14,7 @@ CREATE INDEX idx_user_username on user_record (username);
 
 CREATE TABLE token
 (
-    id          uuid primary key                          default uuid_generate_v4(),
+    id          uuid primary key  default uuid_generate_v4(),
     user_record uuid REFERENCES user_record (id) NOT NULL,
     valid       BOOLEAN                          NOT NULL DEFAULT TRUE,
     token       TEXT UNIQUE                      NOT NULL,
