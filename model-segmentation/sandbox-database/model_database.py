@@ -56,12 +56,13 @@ def database_delete():
 def database_read():
     jobIDs = list()
     imageURLs = list()
-    # Set limit_value to set the number of jobs to complete p
+    # Set limit_value to set the number of jobs to complete
     limit_value = 3
     for job_id, image_url in session.query(Jobs.id, Jobs.image_url).filter_by(status="PENDING").order_by(Jobs.created_at).limit(limit_value).all():
         jobIDs.append(job_id)
         imageURLs.append(image_url)
     return (jobIDs, imageURLs)
+
 
 # Used by main() at the end of function
 def database_update(job_id, image_url, labels_things_pred, labels_stuff_pred, masks_labels_pred, masks_nparr_pred):
