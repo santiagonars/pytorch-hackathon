@@ -25,9 +25,11 @@ class Jobs(Base):
     updated_at = Column(TIMESTAMP, nullable=False)
 
     def __repr__(self):
-        return '<Jobs: {0}:\n -> status:{1}; updated_at:{2}>'.format(self.image_url,
-                                                                    self.status,
-                                                                    self.updated_at)
+        return '<job={0}\n -> image_url={1}\n -> status={2}; created_at={3}; updated_at={4}>'.format(self.id,
+                                                                                    self.image_url,
+                                                                                    self.status,
+                                                                                    self.created_at,
+                                                                                    self.updated_at)
 
 
 engine = create_engine('postgres+psycopg2://postgres:root@localhost:5432/pyvinci')
