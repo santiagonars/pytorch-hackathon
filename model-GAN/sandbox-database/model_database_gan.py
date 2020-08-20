@@ -23,6 +23,9 @@ DBSession = sessionmaker(bind=engine)
 # session.rollback() => use to revert all changes back to the the last commit
 session = DBSession()
 
+# TODO: Update database_read() to work for GAN model use case
+# TODO: Create function to load image to S3 (AWS) to get a URL (in Python)
+# TODO: Update database_update() to work for GAN model use case (Upload url to result_image_url)
 
 # Use database_insert() to add new jobs to database
 def database_insert():
