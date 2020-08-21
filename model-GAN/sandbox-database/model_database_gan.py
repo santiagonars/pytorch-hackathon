@@ -55,10 +55,11 @@ def database_update(job_id, result_image_url):
 
 
 
-# TODO: Create function to load image to S3 (AWS) to get a URL (in Python)
+
 # Store image on the cloud storage and get a url
 def store_image_in_cloud(image_generated):
     pass
+    # TODO: Create function to load image to S3 (AWS) to get a URL (in Python)
 
 
 def main():
@@ -68,10 +69,7 @@ def main():
     # TODO: 2.) might need to do another query to pull background label
 
 
-
-
     # imageGeneratedList = list()
-
 
     """ 
     # Store image on the cloud storage and get a url
