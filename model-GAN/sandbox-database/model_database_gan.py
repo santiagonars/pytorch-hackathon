@@ -1,7 +1,7 @@
 # Segmentation prediction modules
-from model import segmentation
-from model.segmentation import SegmentationModel
-from model.segmentation import ImagePreProcessing
+from model import gan
+from model.gan import GanModel
+from model.gan import ImagePreProcessing
 
 # Database modules
 from sqlalchemy import create_engine
@@ -23,87 +23,63 @@ DBSession = sessionmaker(bind=engine)
 # session.rollback() => use to revert all changes back to the the last commit
 session = DBSession()
 
-# TODO: Update database_read() to work for GAN model use case
-# TODO: Create function to load image to S3 (AWS) to get a URL (in Python)
-# TODO: Update database_update() to work for GAN model use case (Upload url to result_image_url)
 
-# Use database_insert() to add new jobs to database
-def database_insert():
-    newJobs = list()
-    newJobs.append('https://storage.googleapis.com/segmentation-testing/testing_images1/bikes.jpeg')
-    newJobs.append('https://storage.googleapis.com/segmentation-testing/testing_images1/beach.jpeg')
-    newJobs.append('https://storage.googleapis.com/segmentation-testing/testing_images1/buildings.JPG')
-    newJobs.append('https://storage.googleapis.com/segmentation-testing/testing_images1/dog.jpeg')
-    newJobs.append('https://storage.googleapis.com/segmentation-testing/testing_images1/snow_statue.JPG')
-    newJobs.append('https://storage.googleapis.com/segmentation-testing/testing_images1/trees_buildings.JPG')
-    newJobs.append('https://storage.googleapis.com/segmentation-testing/testing_images1/bike.jpeg')
-    for imageURL in newJobs:
-        # New job requires image_url, update status, created_at, updated_at (values cannot be NULL)
-        job_new = Jobs(image_url=imageURL, status="PENDING", created_at=datetime.datetime.now(), updated_at=datetime.datetime.now())
-        session.add(job_new)
-        session.commit()
-        # print('New job added for image_url{}; Timestamp: {:%Y-%m-%d %H:%M:%S}'.format(job_new))
-        print('New job added: {}'.format(job_new))
-
-
-# Use database_delete() to remove records
-def database_delete():
-    # query all completed records to be deleted in database
-    for record in session.query(Jobs).filter_by(status="COMPLETE").all():
-        session.delete(record)
-        session.commit()
-        print("Record deleted: {}".format(record))
-
-
-# Used by main() at the beginning
+# Used by main() to get the labels and masks for that GAN model will use as input
 def database_read():
     jobIDs = list()
-    imageURLs = list()
-    # Set limit_value to set the number of jobs to complete p
+    labels = list()
+    masks = list()
+    # Set limit_value to set the number of jobs to use for GAN model input
     limit_value = 3
-    for job_id, image_url in session.query(Jobs.id, Jobs.image_url).filter_by(status="PENDING").order_by(Jobs.created_at).limit(limit_value).all():
+    for job_id, mask_labels, masks_nparr in session.query(Jobs.id, Jobs.mask_labels, Jobs.masks_nparr).filter_by(status="COMPLETE", ).order_by(Jobs.created_at).limit(limit_value).all():
         jobIDs.append(job_id)
-        imageURLs.append(image_url)
-    return (jobIDs, imageURLs)
+        labels.append(mask_labels)
+        masks.append(pickle.loads(masks_nparr)) # *Load binary data, also? => some_array = pickle.loads(cursor.fetchone()[0])
+    # print(len(jobIDs))
+    # print(len(labels))
+    # print(len(masks))
+    # print(labels[0])
+    # print(masks[0])
+    return (jobIDs, labels, masks)
 
-# Used by main() at the end of function
-def database_update(job_id, image_url, labels_things_pred, labels_stuff_pred, masks_labels_pred, masks_nparr_pred):
+
+# TODO: Might need to update to work architecture
+# Used by main() at the end to load model prediction(s)
+def database_update(job_id, result_image_url):
     job_completed = session.query(Jobs).filter_by(id=job_id).first()
-    job_completed.labels_things = labels_things_pred
-    job_completed.labels_stuff = labels_stuff_pred
-    job_completed.mask_labels = masks_labels_pred
-    job_completed.masks_nparr = pickle.dumps(masks_nparr_pred) # pickle converts numpy array to binary. # Load Example=> some_array = pickle.loads(cursor.fetchone()[0])
-    job_completed.status = 'COMPLETE'
+    # job_completed.status = 'COMPLETE'
     job_completed.updated_at = datetime.datetime.now()
     session.add(job_completed)
     session.commit()
     print('Job completed:{}'.format(job_completed))
 
 
+
+# TODO: Create function to load image to S3 (AWS) to get a URL (in Python)
+# Store image on the cloud storage and get a url
+def store_image_in_cloud(image_generated):
+    pass
+
+
 def main():
-    # Get list of jobs and corresponding model input data
-    jobIDs, imagesURLs = database_read()
-    # Create model
-    model = SegmentationModel()
-    predictor = model.builtModel(UsingCPU=True)
-    # Create image preprocessor
-    image_preprocessing = ImagePreProcessing()
-    # load images to be processed
-    for img in imagesURLs:
-        image_preprocessing.loadImage(img)
-    imageProcessedData = image_preprocessing.getImages()
+    # Get list of jobs and corresponding model input data from database
+    jobIDs, labels, masks = database_read()
+    # TODO: 1.) Whatever label(s) gets selected by user, use index(es) of label(s) to pass corresponding mask to model
+    # TODO: 2.) might need to do another query to pull background label
 
-    # Perform prediction for every image
-    for i in range(len(jobIDs)):
-        image_url, image = imageProcessedData[i]
-        prediction = model.getPrediction(predictor, image)
-        # get labels from panoptic segmentation predictions
-        labels_things_pred, labels_stuff_pred = model.getLabels_PanopticSeg(prediction)
-        # get masks and corresponding labels from instance segmentation predictions
-        masks_nparr_pred, masks_labels_pred = model.getMasks_InstanceSeg(prediction, labels=True)
-        # add predictions to database
-        database_update(jobIDs[i], image_url, labels_things_pred, labels_stuff_pred, masks_labels_pred, masks_nparr_pred)
 
+
+
+    # imageGeneratedList = list()
+
+
+    """ 
+    # Store image on the cloud storage and get a url
+    result_image_url = store_image_in_cloud(image_generated)
+
+    # Load generated image url to database
+    database_update(jobIDs[i], result_image_url)
+    """
 
 if __name__ == "__main__":
     main()
