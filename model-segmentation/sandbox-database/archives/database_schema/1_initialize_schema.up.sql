@@ -14,7 +14,7 @@ CREATE INDEX idx_user_username on user_record (username);
 
 CREATE TABLE token
 (
-    id          uuid primary key  default uuid_generate_v4(),
+    id          uuid primary key                          default uuid_generate_v4(),
     user_record uuid REFERENCES user_record (id) NOT NULL,
     valid       BOOLEAN                          NOT NULL DEFAULT TRUE,
     token       TEXT UNIQUE                      NOT NULL,
@@ -33,14 +33,23 @@ CREATE TABLE project
     updated_at  TIMESTAMP                        NOT NULL
 );
 
+CREATE TABLE image
+(
+  id uuid primary key default uuid_generate_v4(),
+  project_id uuid REFERENCES project (id) NOT NULL,
+  url TEXT NOT NULL,
+  labels_things TEXT ARRAY,
+  labels_stuff TEXT ARRAY,
+  masks_labels TEXT ARRAY,
+  masks BYTEA,
+  created_at  TIMESTAMP                        NOT NULL,
+  updated_at  TIMESTAMP                        NOT NULL
+);
+
 CREATE TABLE jobs
 (
-    id          uuid primary key default uuid_generate_v4(),
-    image_url   TEXT NOT NULL,
-    labels_things TEXT ARRAY,
-    labels_stuff TEXT ARRAY,
-    mask_labels TEXT ARRAY,
-    masks_nparr BYTEA,
+    id uuid primary key default uuid_generate_v4(),
+    project_id uuid REFERENCES project (id) NOT NULL,
     result_image_url  TEXT,
     status      TEXT NOT NULL,
     created_at  TIMESTAMP                        NOT NULL,
