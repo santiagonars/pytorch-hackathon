@@ -1,5 +1,8 @@
 
 # import common libraries
+import os, json, random
+import cv2
+import numpy as np
 import requests
 from requests.exceptions import HTTPError, Timeout
 
