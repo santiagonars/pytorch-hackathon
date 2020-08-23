@@ -1,0 +1,22 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - pyvinci-network
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+  pyvinci-worker:
+    build: .
+    networks:
+      - pyvinci-network
+    depends_on:
+      - db
+networks:
+  pyvinci-network:
+volumes:
+  db-data:
