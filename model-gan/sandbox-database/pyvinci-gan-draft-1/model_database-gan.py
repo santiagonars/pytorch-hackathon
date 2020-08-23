@@ -1,7 +1,7 @@
 # Segmentation prediction modules
-from model import gan
-from model.gan import GanModel
-from model.gan import ImagePreProcessing
+# from model import gan
+# from model.gan import GanModel
+# from model.gan import ImagePreProcessing
 
 # Database modules
 from sqlalchemy import create_engine

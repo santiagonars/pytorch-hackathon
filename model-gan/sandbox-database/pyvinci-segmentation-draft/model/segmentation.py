@@ -42,7 +42,7 @@ class SegmentationModel():
         predictor = DefaultPredictor(cfg)
         # store model classes 
         self.thing_classes = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).thing_classes
-        self.stuff_classes = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).stuff_classes
+        self.stuff_classes = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).thing_classes
         return predictor
 
     def getPrediction(self, predictor, image):
@@ -82,7 +82,7 @@ class SegmentationModel():
                 # print(thing_classes[maskClassID[i]])
                 maskLabels.append(self.thing_classes[maskClassIDs[i]])
             print("rendered InstanceSeg")
-            return (masks, maskLabels)
+            return (maskLabels, masks)
         return masks
 
 
