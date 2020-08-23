@@ -54,13 +54,15 @@ def database_update(job_id, result_image_url):
     print('Job completed:{}'.format(job_completed))
 
 
-
+# image_generated will be created by the GAN model
+image_generated = 'https://storage.googleapis.com/segmentation-testing/testing_images1/bikes.jpeg'
 
 # Store image on the cloud storage and get a url
 def store_image_in_cloud(image_generated):
-    pass
     # TODO: Create function to load image to S3 (AWS) to get a URL (in Python)
 
+    result_image_url = str() # this is the image url that the function will return
+    return result_image_url
 
 def main():
     # Get list of jobs and corresponding model input data from database
