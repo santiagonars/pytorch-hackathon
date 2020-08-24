@@ -76,7 +76,7 @@ class CocoData(Dataset):
         img_size = img.size
         img_size_x = img_size[0]
         img_size_y = img_size[1]
-        seg_masks = torch.zeros([len(self.category),self.final_img_size,self.final_img_size])
+        seg_masks = torch.zeros([len(self.category),1,self.final_img_size,self.final_img_size])
         instance_types = []
         
         for i in range(len(target)):    

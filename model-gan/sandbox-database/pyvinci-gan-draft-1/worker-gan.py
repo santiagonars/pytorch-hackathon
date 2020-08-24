@@ -39,6 +39,19 @@ def database_delete(num):
         print("")
 
 
+def database_read2():
+    jobIDs = list()
+    labels = list()
+    masks = list()
+    # Set limit_value to set the number of jobs to use for GAN model input
+    limit_value = 3
+    for job_id, mask_labels, masks_nparr in session.query(Jobs.id, Jobs.mask_labels, Jobs.masks_nparr).filter_by(status="COMPLETE").order_by(Jobs.created_at).limit(limit_value).all():
+        jobIDs.append(job_id)
+        labels.append(mask_labels)
+        masks.append(pickle.loads(masks_nparr)) # *Load binary data
+    return (jobIDs, labels, masks)
+
+
 def database_read():
     jobIDs = list()
     imageIDs = list()
@@ -49,6 +62,7 @@ def database_read():
         limit_value = JOBS_LIMIT
     else:
         limit_value = 1
+    
     for job_record in session.query(Jobs).filter_by(status="PENDING_LABELS").order_by(Jobs.created_at).limit(limit_value).all():
         projectID = job_record.project_id
         jobIDs.append(job_record.id)
@@ -106,15 +120,32 @@ def worker():
                 database_update_image(imageIDs[j][0], labels_things_pred, labels_stuff_pred, masks_labels_pred, masks_nparr_pred)
         database_update_job(jobIDs[i])
 
+    # Get list of jobs and corresponding model input data from database
+    jobIDs, labels, masks = database_read()
+    # TODO: 1.) Whatever label(s) gets selected by user, use index(es) of label(s) to pass corresponding mask to model
+    # TODO: 2.) might need to do another query to pull background label
+
+
+    # imageGeneratedList = list()
+
+    """ 
+    # Store image on the cloud storage and get a url
+    result_image_url = store_image_in_cloud(image_generated)
+
+    # Load generated image url to database
+    database_update(jobIDs[i], result_image_url)
+    """
+
 
 if __name__ == "__main__":
-    while True:
-        worker()
-        default_interval = 120
-        print('Starting to wait...')
-        if SEGMENTATION_INTERVAL != None:
-            default_interval = SEGMENTATION_INTERVAL
-        time.sleep(default_interval)
+    # while True:
+    #     worker()
+    #     default_interval = 120
+    #     print('Starting to wait...')
+    #     if SEGMENTATION_INTERVAL != None:
+    #         default_interval = SEGMENTATION_INTERVAL
+    #     time.sleep(default_interval)
+    worker()
     # database_delete(2)
 
 

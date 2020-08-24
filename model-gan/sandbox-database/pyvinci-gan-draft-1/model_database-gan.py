@@ -31,7 +31,7 @@ def database_read():
     masks = list()
     # Set limit_value to set the number of jobs to use for GAN model input
     limit_value = 3
-    for job_id, mask_labels, masks_nparr in session.query(Jobs.id, Jobs.mask_labels, Jobs.masks_nparr).filter_by(status="COMPLETE", ).order_by(Jobs.created_at).limit(limit_value).all():
+    for job_id, mask_labels, masks_nparr in session.query(Jobs.id, Jobs.mask_labels, Jobs.masks_nparr).filter_by(status="COMPLETE").order_by(Jobs.created_at).limit(limit_value).all():
         jobIDs.append(job_id)
         labels.append(mask_labels)
         masks.append(pickle.loads(masks_nparr)) # *Load binary data, also? => some_array = pickle.loads(cursor.fetchone()[0])
@@ -55,7 +55,6 @@ def database_update(job_id, result_image_url):
 
 
 # image_generated will be created by the GAN model
-image_generated = 'https://storage.googleapis.com/segmentation-testing/testing_images1/bikes.jpeg'
 
 # Store image on the cloud storage and get a url
 def store_image_in_cloud(image_generated):
