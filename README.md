@@ -8,7 +8,7 @@
 
 ### Project Repos
 - Client/UI => https://github.com/NicolasADavid/pyvinci-client
-- Segmentation Model => https://github.com/Alejom334/pyvinci-segmentation
+- Panoptic  Segmentation Model => https://github.com/Alejom334/pyvinci-segmentation
 - Server =>https://github.com/caquillo07/pyvinci-server
 
 ### Project Architecture
