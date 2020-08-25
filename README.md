@@ -4,7 +4,7 @@
 ---------------------------------------------------------------------------------------
 ### Project Use Cases
 - Use Case #1: Hashtag generator (Using a panoptic segmentation model)
-- Use Case #2: Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
+- COMING SOON: Use Case #2: Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
 
 ### Project Repositories
 - Client/UI => https://github.com/NicolasADavid/pyvinci-client
