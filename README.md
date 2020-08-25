@@ -6,14 +6,13 @@
 - Use Case #1: Hashtag generator
 - Use Case #2: Generate new image from user selected labels
 
-### Submission Deadline:
-5:00pm EDT Aug 25, 2020
+### Project Repos:
+- https://github.com/NicolasADavid/pyvinci-client
+- https://github.com/Alejom334/pyvinci-segmentation
+- https://github.com/caquillo07/pyvinci-server
 
 ### Project Architecture
 
-#### PyVinci  (VERSION 1)
-
-![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
 
 #### Use Case Diagram (VERSION 1)
 
@@ -23,3 +22,6 @@
 
 ![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
 
+#### PyVinci Marketing Concept
+
+![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
