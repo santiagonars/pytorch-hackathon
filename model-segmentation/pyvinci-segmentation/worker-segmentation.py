@@ -26,7 +26,7 @@ session = DBSession()
 def database_delete(num):
     for i in range(num):
         projectID = str()
-        job_record = session.query(Jobs).filter_by(status="PENDING_GAN").order_by(Jobs.created_at).first()
+        job_record = session.query(Jobs).filter_by(status="COMPLETE").order_by(Jobs.created_at).first()
         projectID = job_record.project_id
         session.delete(job_record)
         session.commit()
@@ -71,7 +71,7 @@ def database_update_image(image_id, labels_things_pred, labels_stuff_pred, masks
 
 def database_update_job(job_id):
     job_completed = session.query(Jobs).filter_by(id=job_id).first()
-    job_completed.status = 'PENDING_GAN'
+    job_completed.status = 'COMPLETE'
     job_completed.updated_at = datetime.datetime.now()
     session.add(job_completed)
     session.commit()
@@ -98,8 +98,8 @@ def worker():
                 prediction = model.getPrediction(predictor, image)
                 labels_things_pred, labels_stuff_pred = model.getLabels_PanopticSeg(prediction)
                 masks_labels_pred, masks_nparr_pred = model.getMasks_InstanceSeg(prediction, labels=True)
-                for index in range(len(masks_labels_pred)):
-                    masks_labels_pred[index] = str(masks_labels_pred[index]) + "_" + str(index)
+                #for index in range(len(masks_labels_pred)):
+                #    masks_labels_pred[index] = str(masks_labels_pred[index]) + "_" + str(index)
                 database_update_image(imageIDs[j][0], labels_things_pred, labels_stuff_pred, masks_labels_pred, masks_nparr_pred)
         database_update_job(jobIDs[i])
 
