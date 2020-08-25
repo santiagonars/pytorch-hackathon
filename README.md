@@ -24,4 +24,4 @@
 
 #### PyVinci Concept (Use Case #2)
 
-![PyVinci Initial(use case #2)](architecture/frontend-client/pyvinci_final.png)
+![PyVinci Initial(use case #2)](frontend-client/pyvinci_final.png)
