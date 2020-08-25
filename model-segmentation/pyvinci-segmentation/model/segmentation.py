@@ -42,7 +42,7 @@ class SegmentationModel():
         predictor = DefaultPredictor(cfg)
         # store model classes 
         self.thing_classes = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).thing_classes
-        self.stuff_classes = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).thing_classes
+        self.stuff_classes = MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).stuff_classes
         return predictor
 
     def getPrediction(self, predictor, image):
