@@ -9,7 +9,7 @@
 - Server =>https://github.com/caquillo07/pyvinci-server
 
 ### Project webpage
-- http://www.pyvinci.com/
+- https://www.pyvinci.com/
 
 ### Project Use Cases
 - Use Case #1: Hashtag generator (Using a panoptic segmentation model)
