@@ -1,9 +1,10 @@
 # pytorch-hackathon (
 General Project Information:
-Project name PyVinci
+
 ---------------------------------------------------------------------------------------
 ## PyTorch Hackathon Summer 2020 Project
 
+# Project name: PyVinci
 
 ### Submission Deadline:
 5:00pm EDT Aug 25, 2020
