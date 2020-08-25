@@ -18,11 +18,11 @@
 
 ### Project Architecture
 
-#### Use Case Diagram (VERSION 1)
+#### Use Case Diagram (VERSION 1 *needs to be updated to reflect hastag generator usew case)
 
 ![use case diagram](architecture/UML-Diagrams/UseCaseDiagram-PytorchHackaton-Jul20_20.jpg)
 
-#### Cross-Function / Swim Lane Diagram (VERSION 1)
+#### Cross-Function / Swim Lane Diagram (VERSION 1 *needs to be updated)
 
 ![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
 
