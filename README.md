@@ -3,7 +3,7 @@
 ## Project name: PyVinci
 ---------------------------------------------------------------------------------------
 
-### Final Deployed Project Repositories (Access each repo below for final code to download each part of the app separately)
+### Final Deployed Project Repositories (Access each repo below for final deployed code to test app)
 - Client/UI => https://github.com/NicolasADavid/pyvinci-client
 - Panoptic Segmentation Model => https://github.com/Alejom334/pyvinci-segmentation
 - Server =>https://github.com/caquillo07/pyvinci-server
