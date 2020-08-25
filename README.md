@@ -1,4 +1,4 @@
-# General Pyytorch Hackathon Information Page
+# General Pytorch Hackathon Information Page
 
 ## Project name: PyVinci
 ---------------------------------------------------------------------------------------
