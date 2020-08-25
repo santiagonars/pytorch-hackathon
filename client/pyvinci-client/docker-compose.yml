@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+    client:
+        tty: true
+        build: ./pyvinci-client
+        restart: on-failure
+        command: npm run start
+        volumes:
+            - /pyvinci-client/node_modules
+            - ./pyvinci-client:/client
+        ports:
+            - '3000:3000'

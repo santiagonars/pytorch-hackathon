@@ -1,0 +1,29 @@
+/* .container {} */
+
+ul {
+    display: inline-block;
+    padding: 0px;
+    margin: 10px;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: normal;
+    display: inline-block;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+

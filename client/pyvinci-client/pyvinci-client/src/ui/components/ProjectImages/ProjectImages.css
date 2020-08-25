@@ -1,0 +1,16 @@
+img {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.card-image {
+    display: block;
+}
+
+button {
+    display: inline-block;
+}
+
+.labels-container {
+    margin: .4rem;
+}

@@ -11,14 +11,13 @@ import pickle
 import time
 import os
 
-# os.environ['WORKER_DATABASE_URL'] = 'postgres+psycopg2://postgres:root@localhost:5432/pyvinci'
+
 DATABASE_URL = os.getenv('WORKER_DATABASE_URL')
 SEGMENTATION_INTERVAL = int(os.getenv('SEGMENTATION_INTERVAL')) # in seconds (defaults=120)
 JOBS_LIMIT = int(os.getenv('JOBS_LIMIT')) # set between 0 and 3 (default=1)
 USING_CPU = os.getenv('USING_CPU') # set to 'False' to run on GPU
 
 engine = create_engine(DATABASE_URL)
-# engine = create_engine('postgres+psycopg2://postgres:root@localhost:5432/pyvinci')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
@@ -52,11 +51,9 @@ def database_read():
     for job_record in session.query(Jobs).filter_by(status="PENDING_LABELS").order_by(Jobs.created_at).limit(limit_value).all():
         projectID = job_record.project_id
         jobIDs.append(job_record.id)
-        # print("Job query: {}".format(job_record))
         for image_record in session.query(Image).filter_by(project_id=projectID).all():
             imageIDs.append([image_record.id, job_record.id])
             imageURLs.append(image_record.url)
-            # print("Image query: {}".format(image_record))
     return (jobIDs, imageIDs, imageURLs)
 
 
@@ -115,6 +112,5 @@ if __name__ == "__main__":
         if SEGMENTATION_INTERVAL != None:
             default_interval = SEGMENTATION_INTERVAL
         time.sleep(default_interval)
-    # database_delete(2)
 
 
