@@ -1,4 +1,4 @@
-# General Pytorch Summer Hackathon 2020 Information Page
+# Pytorch Summer Hackathon 2020 Information Page
 
 ## Project name: PyVinci
 ---------------------------------------------------------------------------------------
@@ -6,10 +6,10 @@
 - Use Case #1: Hashtag generator
 - Use Case #2: Generate new image from user selected labels
 
-### Project Repos:
-- https://github.com/NicolasADavid/pyvinci-client
-- https://github.com/Alejom334/pyvinci-segmentation
-- https://github.com/caquillo07/pyvinci-server
+### Project Repos
+- Client/UI => https://github.com/NicolasADavid/pyvinci-client
+- Panoptic  Segmentation Model => https://github.com/Alejom334/pyvinci-segmentation
+- Server =>https://github.com/caquillo07/pyvinci-server
 
 ### Project Architecture
 
@@ -22,6 +22,6 @@
 
 ![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
 
-#### PyVinci Marketing Concept
+### PyVinci Concept (Use Case #2)
 
-![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
+![PyVinci Initial(use case #2)](frontend-client/pyvinci_final.png)
