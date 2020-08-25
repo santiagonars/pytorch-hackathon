@@ -14,7 +14,7 @@
 
 ### PyVinci Concept (after use Case #2 release)
 
-![PyVinci Initial(use case #2)](frontend-client/pyvinci_final.png)
+![PyVinci Initial(use case #2)](client/pyvinci_final.png)
 
 ### Project Architecture
 
