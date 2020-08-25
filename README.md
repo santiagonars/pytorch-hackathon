@@ -22,6 +22,6 @@
 
 ![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
 
-#### PyVinci Marketing Concept
+#### PyVinci Concept (Use Case #2)
 
-![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
+![PyVinci Initial(use case #2)](architecture/frontend-client/pyvinci_final.png)
