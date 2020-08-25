@@ -22,6 +22,6 @@
 
 ![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
 
-#### PyVinci Concept (Use Case #2)
+### PyVinci Concept (Use Case #2)
 
 ![PyVinci Initial(use case #2)](frontend-client/pyvinci_final.png)
