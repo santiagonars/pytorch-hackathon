@@ -18,7 +18,7 @@
 
 ### Project Architecture
 
-#### Use Case Diagram (VERSION 1 *needs to be updated to reflect hastag generator usew case)
+#### Use Case Diagram (VERSION 1 *needs to be updated to reflect hastagh generator use case)
 
 ![use case diagram](architecture/UML-Diagrams/UseCaseDiagram-PytorchHackaton-Jul20_20.jpg)
 
