@@ -6,10 +6,10 @@
 - Use Case #1: Hashtag generator
 - Use Case #2: Generate new image from user selected labels
 
-### Project Repos:
-- https://github.com/NicolasADavid/pyvinci-client
-- https://github.com/Alejom334/pyvinci-segmentation
-- https://github.com/caquillo07/pyvinci-server
+### Project Repos
+- Client/UI => https://github.com/NicolasADavid/pyvinci-client
+- Segmentation Model => https://github.com/Alejom334/pyvinci-segmentation
+- Server =>https://github.com/caquillo07/pyvinci-server
 
 ### Project Architecture
 
