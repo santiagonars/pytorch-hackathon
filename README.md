@@ -1,6 +1,6 @@
-# pytorch-hackathon
+# pytorch-hackathon (
 General Project Information:
-
+Project name PyVinci
 ---------------------------------------------------------------------------------------
 ## PyTorch Hackathon Summer 2020 Project
 
