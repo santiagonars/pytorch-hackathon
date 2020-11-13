@@ -10,7 +10,7 @@
 - Alejandro Martinez
 - Sahivi Gonzalez
 
-### Project Architecture:
+## Project Architecture:
 
 #### Main Use Cases
 - Use Case #1: Hashtag generator (Using a panoptic segmentation model)
@@ -28,7 +28,7 @@
 
 ![PyVinci Initial(use case #2)](client/pyvinci_final.png)
 
-### Project Deployment:
+## Project Deployment:
 
 #### Webpage
 - https://www.pyvinci.com/ (*NOTE: no longer in production)
@@ -47,5 +47,5 @@
 - Go
 - React
 
-### Acknowledgements:
+#### Acknowledgements:
 - TODO
