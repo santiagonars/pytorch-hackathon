@@ -40,9 +40,8 @@
 - Python
 - PyTorch
 - Detectron2
-- PostgreSQL
-- Docker
 - SQLAlchemy
+- Docker
 - Go
 - React
 
