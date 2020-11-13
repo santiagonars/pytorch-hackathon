@@ -3,30 +3,48 @@
 ## Project name: PyVinci
 ---------------------------------------------------------------------------------------
 
-### Deployed Project Repositories (Access each repo to download final deployed code)
-- Client/UI => https://github.com/NicolasADavid/pyvinci-client
-- Panoptic Segmentation Model => https://github.com/Alejom334/pyvinci-segmentation
-- Server =>https://github.com/caquillo07/pyvinci-server
-
-### Project webpage
-- https://www.pyvinci.com/
-
-### Project Use Cases
-- Use Case #1: Hashtag generator (Using a panoptic segmentation model)
-- Use Case #2 (COMING SOON):  Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
-
-### PyVinci Concept (after use Case #2 release)
-
-![PyVinci Initial(use case #2)](client/pyvinci_final.png)
+### Team Members:
+- Santiago Norena
+- Hector Mejia
+- Nicolas David
+- Alejandro Martinez
+- Sahivi Gonzalez
 
 ### Project Architecture
 
-#### Use Case Diagram (VERSION 1 *needs to be updated to also reflect hastash generator use case)
+#### Main Use Cases
+- Use Case #1: Hashtag generator (Using a panoptic segmentation model)
+- Use Case #2 (COMING SOON):  Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
 
-![use case diagram](architecture/UML-Diagrams/UseCaseDiagram-PytorchHackaton-Jul20_20.jpg)
+#### Use Case Diagram (VERSION 2 *NOTE: use cases in red were unrealeased in production)
 
-#### Cross-Function / Swim Lane Diagram (VERSION 1 *needs to be updated)
+![use case diagram](architecture/UML-Diagrams/version-2/UseCaseDiagram-PytorchHackaton.jpg)
 
-![cross-function / swim lane diagram](architecture/UML-Diagrams/Cross-funtional_SwimlaneDiagram-PyTorchHackathon-Jul20_20.jpg)
+#### Cross-Function / Swim Lane Diagram (VERSION 2 *NOTE: production realeased version for competition)
+
+![cross-function / swim lane diagram](architecture/UML-Diagrams/version-2/Cross-funtional_SwimlaneDiagram-PyTorchHackathon.png)
+
+### PyVinci Initial Concept:
+
+![PyVinci Initial(use case #2)](client/pyvinci_final.png)
+
+### Project Deployment
+
+#### Webpage
+- https://www.pyvinci.com/ (*NOTE: no longer in production)
 
 
+#### Deploment Demo
+- TODO: Show screenshots
+- Add link to video
+
+
+### Main Technologies:
+- Python
+- PyTorch
+- Detectron2
+- PostgreSQL
+- Docker
+- SQLAlchemy
+- Go
+- React
