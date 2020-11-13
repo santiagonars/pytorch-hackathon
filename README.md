@@ -15,11 +15,11 @@
 - Use Case #1: Hashtag generator (Using a panoptic segmentation model)
 - Use Case #2 (Unreleased in production): Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
 
-#### Use Case Diagram (VERSION 2 *NOTE: areas highlighted in red were not released in production)
+### Use Case Diagram (VERSION 2 *Areas highlighted in red were not released in production)
 
 ![use case diagram](architecture/UML-Diagrams/version-2/UseCaseDiagram-PytorchHackaton.png)
 
-#### Cross-Function / Swim Lane Diagram (VERSION 2 *NOTE: final production version released for competition)
+### Cross-Function / Swim Lane Diagram (VERSION 2 *Final production version released for competition)
 
 ![cross-function / swim lane diagram](architecture/UML-Diagrams/version-2/Cross-funtional_SwimlaneDiagram-PyTorchHackathon.png)
 
@@ -32,7 +32,7 @@
 #### Webpage
 - https://www.pyvinci.com/ (*NOTE: no longer in production)
 
-### Deploment Demo
+### Deployment Demo
 - TODO: Show screenshots
 - Add link to video
 
