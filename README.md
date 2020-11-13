@@ -1,7 +1,6 @@
 # Pytorch Summer Hackathon 2020 Information Page
 
 ## Project name: PyVinci
----------------------------------------------------------------------------------------
 
 ### Team Members:
 - Santiago Norena
@@ -9,7 +8,7 @@
 - Nicolas David
 - Alejandro Martinez
 - Sahivi Gonzalez
-
+---------------------------------------------------------------------------------------
 ## Project Architecture:
 
 #### Main Use Cases
@@ -33,7 +32,7 @@
 #### Webpage
 - https://www.pyvinci.com/ (*NOTE: no longer in production)
 
-#### Deploment Demo
+### Deploment Demo
 - TODO: Show screenshots
 - Add link to video
 
@@ -47,5 +46,5 @@
 - Go
 - React
 
-#### Acknowledgements:
+### Acknowledgements:
 - TODO
