@@ -21,16 +21,13 @@
 
 ---------------------------------------------------------------------------------------
 ## PyVinci Use Case Diagram 
-###### VERSION 2 (*Areas highlighted in red were not released into production)
+###### VERSION 2 (Areas highlighted in red were not released into production)
 ![use case diagram](architecture/UML-Diagrams/version-2/PyVinci-UseCase-Diagram.png)
 
 ## PyVinci System Architecture Diagram 
-##### (Cross-function / Swim lane diagram)
-###### VERSION 2 (*Version released for competition)
+##### *Cross-function / Swim lane diagram
+###### VERSION 2 (Version released for competition)
 ![cross-function / swim lane diagram](architecture/UML-Diagrams/version-2/PyVinci-System-Architecture-Diagram.png)
-
-## PyVinci Initial Concept
-![PyVinci Initial(use case #2)](client/pyvinci_final.png)
 
 ---------------------------------------------------------------------------------------
 ## Deployment Demo:
@@ -49,6 +46,8 @@ After uploading images in new project page, the user can click "Begin Modeling".
 After the ML model generates labels for all images, they will show up below each image. User can click "Home" to create a new project or see list of projects.
 ![after model](deployment_demo/new_project_AFTER_running_model.png)
 
+## PyVinci Initial Concept
+![PyVinci Initial(use case #2)](client/pyvinci_final.png)
 
 ## It was built with:
 - numpy
