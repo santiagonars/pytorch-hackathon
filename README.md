@@ -2,7 +2,7 @@
 
 ## Project name: PyVinci
 
-#### Main packages deployment packages:
+#### Main packages deployed:
 - pyvinci-segmentation 
 - pyvinci-client
 - pyvinci-server
