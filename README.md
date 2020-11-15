@@ -47,11 +47,9 @@ Accessing the domain name https://www.pyvinci.com/ will take user to the main pa
 #### User can click "Home" to create a new project or see list of projects.
 ![after model](deployment_demo/new_project_AFTER_running_model.png)
 
+---------------------------------------------------------------------------------------
 ## PyVinci Initial Concept
-![PyVinci Initial(use case #2)](deployment_demo/pyvinci-thumbnail.png)
-
-## PyVinci Initial Concept
-![PyVinci Initial(use case #2)](client/pyvinci_final.png)
+![PyVinci initial concept](deployment_demo/pyvinci-thumbnail.png)
 
 ## It was built with:
 - numpy
