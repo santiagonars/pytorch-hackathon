@@ -2,12 +2,12 @@
 
 ## Project name: PyVinci
 
-### Main packages deployment packages:
+#### Main packages deployment packages:
 - pyvinci-segmentation 
 - pyvinci-client
 - pyvinci-server
 
-### Team Members:
+#### Team Members:
 - Santiago Norena
 - Hector Mejia
 - Nicolas David
