@@ -10,7 +10,7 @@
 
 #### Main use cases:
 - 1: Hashtag generator (Using a panoptic segmentation model)
-- 2: (Not released): Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
+- 2: (Not released): Generate new image from image labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
 
 #### Team members:
 - Santiago Norena
