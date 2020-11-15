@@ -25,16 +25,16 @@
 ![use case diagram](architecture/UML-Diagrams/version-2/PyVinci-UseCase-Diagram.png)
 
 ## PyVinci System Architecture Diagram 
-##### *Cross-function / Swim lane diagram
+##### Cross-function / Swimlane diagram
 ###### VERSION 2 (Version released for competition)
 ![cross-function / swim lane diagram](architecture/UML-Diagrams/version-2/PyVinci-System-Architecture-Diagram.png)
 
 ---------------------------------------------------------------------------------------
 ## Deployment Demo:
 
-#### Accessing the domain name https://www.pyvinci.com/ will take user to the main page. (*No longer in production)
+##### Accessing the domain name https://www.pyvinci.com/ will take user to the main page. (No longer in production)
 
-New user needs to register, then login.
+#### New user needs to register, then login.
 ![login page](deployment_demo/login_page.png)
 
 Once logged in, user can see list of projects, or create a new one.
@@ -43,7 +43,8 @@ Once logged in, user can see list of projects, or create a new one.
 After uploading images in new project page, the user can click "Begin Modeling".
 ![before model](deployment_demo/new_project_BEFORE_running_model.png)
 
-After the ML model generates labels for all images, they will show up below each image. User can click "Home" to create a new project or see list of projects.
+After the ML model generates labels for all images, they will show up below each image. 
+User can click "Home" to create a new project or see list of projects.
 ![after model](deployment_demo/new_project_AFTER_running_model.png)
 
 ## PyVinci Initial Concept
