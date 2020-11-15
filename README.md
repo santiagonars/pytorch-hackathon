@@ -1,7 +1,8 @@
 # Pytorch Summer Hackathon 2020 Information Page
 
 ## Project name: PyVinci
-The three main packages that were deployed are:
+
+### Main packages deployment packages:
 - pyvinci-segmentation 
 - pyvinci-client
 - pyvinci-server
