@@ -2,14 +2,15 @@
 
 ## Project name: PyVinci
 
-<<<<<<< Updated upstream
+
 #### Main packages deployed:
-=======
-#### Main packages deployment packages:
->>>>>>> Stashed changes
 - pyvinci-segmentation 
 - pyvinci-client
 - pyvinci-server
+
+#### Main Use Cases
+- Use Case #1: Hashtag generator (Using a panoptic segmentation model)
+- Use Case #2 (Not released): Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
 
 #### Team Members:
 - Santiago Norena
@@ -18,11 +19,7 @@
 - Alejandro Martinez
 - Sahivi Gonzalez
 
-#### Main Use Cases
-- Use Case #1: Hashtag generator (Using a panoptic segmentation model)
-- Use Case #2 (Not released in production): Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
 ---------------------------------------------------------------------------------------
-
 ## PyVinci Use Case Diagram 
 ###### VERSION 2 (*Areas highlighted in red were not released into production)
 ![use case diagram](architecture/UML-Diagrams/version-2/PyVinci-UseCase-Diagram.png)
