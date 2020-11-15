@@ -32,11 +32,11 @@
 #### Webpage
 - https://www.pyvinci.com/ (*No longer in production)
 
-### Deployment Demo
-- TODO: Show screenshots
-- Add link to video
 
-### It was built with:
+- TODO: Show screenshots
+
+
+## It was built with:
 - numpy
 - python
 - pytorch
