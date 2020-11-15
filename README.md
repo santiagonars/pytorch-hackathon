@@ -23,9 +23,9 @@
 ###### VERSION 2 (*Version released for competition)
 ![cross-function / swim lane diagram](architecture/UML-Diagrams/version-2/PyVinci-System-Architecture-Diagram.png)
 
-## PyVinci Initial Concept:
-
+## PyVinci Initial Concept
 ![PyVinci Initial(use case #2)](client/pyvinci_final.png)
+
 
 ## Project Deployment:
 
@@ -46,4 +46,5 @@
 - React
 
 ### Acknowledgements:
-- TODO
+- https://github.com/facebookresearch/detectron2
+- https://github.com/0zgur0/Seq_Scene_Gen
