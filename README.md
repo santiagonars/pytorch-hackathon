@@ -9,8 +9,8 @@
 - pyvinci-server
 
 #### Main use cases:
-- #1: Hashtag generator (Using a panoptic segmentation model)
-- #2 (Not released): Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
+- 1: Hashtag generator (Using a panoptic segmentation model)
+- 2: (Not released): Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
 
 #### Team members:
 - Santiago Norena
@@ -44,8 +44,11 @@ Accessing the domain name https://www.pyvinci.com/ will take user to the main pa
 ![before model](deployment_demo/new_project_BEFORE_running_model.png)
 
 #### After the ML model generates labels for all images, they will show up below each image. 
-User can click "Home" to create a new project or see list of projects.
+#### User can click "Home" to create a new project or see list of projects.
 ![after model](deployment_demo/new_project_AFTER_running_model.png)
+
+## PyVinci Initial Concept
+![PyVinci Initial(use case #2)](deployment_demo/pyvinci-thumbnail.png)
 
 ## PyVinci Initial Concept
 ![PyVinci Initial(use case #2)](client/pyvinci_final.png)
