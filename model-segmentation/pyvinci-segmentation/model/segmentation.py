@@ -32,7 +32,7 @@ class SegmentationModel():
         # add config 
         cfg.merge_from_file(model_zoo.get_config_file("COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml"))
         # set threshold for this model; means that inference has to be greater than 50%
-        cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5  
+        cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.6 
         # Find model weights
         cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml")
         if (UsingCPU == True):
