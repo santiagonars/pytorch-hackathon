@@ -2,7 +2,11 @@
 
 ## Project name: PyVinci
 
+<<<<<<< Updated upstream
 #### Main packages deployed:
+=======
+#### Main packages deployment packages:
+>>>>>>> Stashed changes
 - pyvinci-segmentation 
 - pyvinci-client
 - pyvinci-server
