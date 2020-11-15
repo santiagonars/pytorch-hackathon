@@ -17,13 +17,12 @@
 
 
 ### PyVinci Use Case Diagram 
-###### VERSION 2 
-*Areas highlighted in red were not released into production
+###### VERSION 2 (*Areas highlighted in red were not released into production)
 ![use case diagram](architecture/UML-Diagrams/version-2/PyVinci-UseCase-Diagram.png)
 
-### PyVinci System Architecture Diagram ###### (Cross-function / Swim lane diagram)
-###### VERSION 2
-*Final production version released for competition)
+### PyVinci System Architecture Diagram 
+##### (Cross-function / Swim lane diagram)
+###### VERSION 2 (*Version released for competition)
 ![cross-function / swim lane diagram](architecture/UML-Diagrams/version-2/PyVinci-System-Architecture-Diagram.png)
 
 ### PyVinci Initial Concept:
