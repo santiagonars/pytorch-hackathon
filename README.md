@@ -26,25 +26,33 @@
 ## PyVinci Initial Concept
 ![PyVinci Initial(use case #2)](client/pyvinci_final.png)
 
-
-## Project Deployment:
+---------------------------------------------------------------------------------------
+## Deployment Demo:
 
 #### Webpage
-- https://www.pyvinci.com/ (*NOTE: no longer in production)
+- https://www.pyvinci.com/ (*No longer in production)
 
 ### Deployment Demo
 - TODO: Show screenshots
 - Add link to video
 
-### Main Technologies:
-- Python
-- PyTorch
-- Detectron2
-- SQLAlchemy
-- Docker
-- Go
-- React
+### It was built with:
+- numpy
+- python
+- pytorch
+- detectron2
+- cv2
+- psycopq2
+- sqlalchemy
+- posgresql
+- docker
+- go / golang 
+- go-fiber
+- nginx
+- Amazon Web Services (AWS): EC2, S3
+- npm
+- react
+- miragejs
 
 ### Acknowledgements:
-- https://github.com/facebookresearch/detectron2
 - https://github.com/0zgur0/Seq_Scene_Gen
