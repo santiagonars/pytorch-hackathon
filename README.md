@@ -18,8 +18,8 @@
 - Nicolas David
 - Alejandro Martinez
 - Sahivi Gonzalez
----------------------------------------------------------------------------------------
-## PyVinci Initial Concept
+
+### PyVinci Initial Concept
 ![PyVinci initial concept](deployment_demo/pyvinci-thumbnail.png)
 
 ---------------------------------------------------------------------------------------
