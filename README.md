@@ -8,11 +8,11 @@
 - pyvinci-client
 - pyvinci-server
 
-#### Main Use Cases
-- Use Case #1: Hashtag generator (Using a panoptic segmentation model)
-- Use Case #2 (Not released): Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
+#### Main use cases:
+- #1: Hashtag generator (Using a panoptic segmentation model)
+- #2 (Not released): Generate new image from user labels (Using layer based sequencing image generator with GANs with the labels/masks created by the panoptic segmentation model)
 
-#### Team Members:
+#### Team members:
 - Santiago Norena
 - Hector Mejia
 - Nicolas David
