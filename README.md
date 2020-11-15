@@ -18,6 +18,9 @@
 - Nicolas David
 - Alejandro Martinez
 - Sahivi Gonzalez
+---------------------------------------------------------------------------------------
+## PyVinci Initial Concept
+![PyVinci initial concept](deployment_demo/pyvinci-thumbnail.png)
 
 ---------------------------------------------------------------------------------------
 ## PyVinci Use Case Diagram 
@@ -48,9 +51,6 @@ Accessing the domain name https://www.pyvinci.com/ will take user to the main pa
 ![after model](deployment_demo/new_project_AFTER_running_model.png)
 
 ---------------------------------------------------------------------------------------
-## PyVinci Initial Concept
-![PyVinci initial concept](deployment_demo/pyvinci-thumbnail.png)
-
 ## It was built with:
 - numpy
 - python
