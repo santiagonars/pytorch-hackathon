@@ -3,7 +3,7 @@ module github.com/caquillo07/pyvinci-server
 go 1.14
 
 require (
-	github.com/aws/aws-sdk-go v1.17.7
+	github.com/aws/aws-sdk-go v1.33.0
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gofiber/cors v0.2.2
 	github.com/gofiber/fiber v1.13.3
